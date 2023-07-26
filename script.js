@@ -5,6 +5,7 @@ const displayAlert = document.querySelector('.alert') ;
 const label = document.querySelector('.label');
 const fill = document.querySelector('.fill');
 const submit = document.querySelector('button');
+const checkbox = document.querySelector('input[type=checkbox]');
 
 
 form.addEventListener('submit', (e) => {
@@ -54,3 +55,12 @@ pass.addEventListener('input', (e) => {
 
     
 })
+
+checkbox.addEventListener('change', () => {
+    if(checkbox.checked) {
+        pass.type = 'text';
+    }else {
+        pass.type = 'password';
+    }
+})
+
